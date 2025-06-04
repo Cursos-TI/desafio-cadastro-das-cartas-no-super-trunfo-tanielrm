@@ -21,8 +21,8 @@ int main(){
     printf("Digite o codigo do estado:");
     scanf("%s", codigo1);
     printf("Digite o nome da cidade:");
-    getchar();
-    fgets(nome1,255,stdin);
+    getchar(); //limpeza do buffer do stdin
+    fgets(nome1,255,stdin); //ler a linha digitada, pois o nome da cidade por ser composto de mais de um nome
     nome1[strcspn(nome1, "\n")] = 0;
     printf("Digite a populacao da cidade:");
     scanf("%d", &populacao1);
@@ -32,7 +32,7 @@ int main(){
     scanf("%f", &pib1);
     printf("Digite a quantidade de pontos turisticos da cidade:");
     scanf("%d", &pontos1);
-    getchar();
+    getchar(); //limpeza do buffer do stdin 
 
     // leitura dos dados da segunda carta
     printf("\n\nAgora vamos informar os dados da segunda carta.\n");
